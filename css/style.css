@@ -1,10 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* नोट ः- यहा तल केहि पानि कलर चेन्ज गर्नु परेमा ःroot मा entry गर्नु पर्छ ल */
+
 :root {
   --text-dark: #171717;
+  --text-black:#000;
   --text-light: #525252;
   --extra-light: #a3a3a3;
   --white: #ffffff;
+  --queen-pink: #ead1dc;
+  --gray:#999999;
+  --text-hex:#3d85c6;
   --max-width: 1200px;
   --header-font: "Merriweather", serif;
 }
@@ -23,7 +29,7 @@
 
 .section__header {
   margin-bottom: 1rem;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 400;
   font-family: var(--header-font);
   color: var(--text-dark);
@@ -31,7 +37,7 @@
 }
 
 .section__description {
-  color: var(--text-light);
+  color: var(--text-black);
   line-height: 1.75rem;
   text-align: center;
 }
@@ -43,14 +49,14 @@
   font-size: 1rem;
   font-weight: 500;
   color: var(--white);
-  background-color: var(--text-dark);
+  background-color: var(--text-hex);
   border-radius: 5px;
   transition: 0.3s;
   cursor: pointer;
 }
 
 .btn:hover {
-  background-color: var(--text-light);
+  background-color: var(--gray);
 }
 
 img {
@@ -70,6 +76,7 @@ body {
 
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: #eeeedd;
 }
 
 .header {
@@ -101,11 +108,11 @@ nav {
 }
 
 .nav__logo img {
-  max-width: 70px;
+  max-width: 90px;
 }
 
 .nav__menu__btn {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: var(--white);
   cursor: pointer;
 }
@@ -135,7 +142,7 @@ nav {
 
 .nav__links a {
   padding-bottom: 5px;
-  font-weight: 500;
+  font-weight: 700;
   color: var(--white);
   border-bottom: 2px solid transparent;
 }
