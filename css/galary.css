@@ -1,163 +1,32 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+body{
+	margin:0;
+	padding:0;
+}
+/* .container{
+	width:90%
+	margin:10px auto;
+} */
+.portfolio-menu{
+	text-align:center;
+}
+.portfolio-menu ul li{
+	display:inline-block;
+	margin:0;
+	list-style:none;
+	padding:10px 15px;
+	cursor:pointer;
+	-webkit-transition:all 05s ease;
+	-moz-transition:all 05s ease;
+	-ms-transition:all 05s ease;
+	-o-transition:all 05s ease;
+	transition:all .5s ease;
 }
 
-body {
-  background-color: #eeeeee;
+.portfolio-item{
+	/*width:100%;*/
 }
-
-h1 {
-  text-align: center;
-  margin-top: 3rem;
-  font-size: 2.5rem;
-  letter-spacing: 20px;
-  word-spacing: 20px;
-}
-
-.wrapper {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  margin-top: 4rem;
-  overflow: hidden;
-  position: relative;
-}
-
-.container {
-  height: 400px;
-  display: flex;
-  flex-wrap: nowrap;
-  transition: transform 0.6s ease; /* Smooth transition for centering */
-}
-
-.card {
-  width: 150px;
-  border-radius: .75rem;
-  background-size: cover;
-  cursor: pointer;
-  overflow: hidden;
-  border-radius: 2rem;
-  margin: 0 10px;
-  display: flex;
-  align-items: flex-end;
-  transition: .6s cubic-bezier(.28, -0.03, 0, 0.99);
-  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
-}
-
-input {
-  display: none;
-}
-
-input:checked + label {
-  width: 600px;
-}
-
-input:checked + label .description {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-}
-
-/* Left and Right Arrow Buttons */
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 1000;
-  font-size: 18px;
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Adding background images for each card */
-.card[for="c1"] { background-image: url('img/image-1.avif'); }
-.card[for="c2"] { background-image: url('img/image-2.jpg'); }
-.card[for="c3"] { background-image: url('img/image-3.avif'); }
-.card[for="c4"] { background-image: url('img/image-4.jpg'); }
-/* Continue adding image backgrounds for c5 to c20 */
-
-
-/* Remaining image backgrounds from c5 to c20 */
-
-
-.card[for="c5"] {
-  background-image: url('img/image-5.jpg');
-}
-
-.card[for="c6"] {
-  background-image: url('img/image-6.jpg');
-}
-
-.card[for="c7"] {
-  background-image: url('img/image-7.jpg');
-}
-
-.card[for="c8"] {
-  background-image: url('img/image-8.jpg');
-}
-
-.card[for="c9"] {
-  background-image: url('img/image-9.jpg');
-}
-
-.card[for="c10"] {
-  background-image: url('img/image-10.jpg');
-}
-
-.card[for="c11"] {
-  background-image: url('img/image-11.jpg');
-}
-
-.card[for="c12"] {
-  background-image: url('img/image-12.jpg');
-}
-
-.card[for="c13"] {
-  background-image: url('img/image-13.jpg');
-}
-
-.card[for="c14"] {
-  background-image: url('img/image-14.jpg');
-}
-
-.card[for="c15"] {
-  background-image: url('img/image-15.jpg');
-}
-
-.card[for="c16"] {
-  background-image: url('img/image-16.jpg');
-}
-
-.card[for="c17"] {
-  background-image: url('img/image-17.jpg');
-}
-
-.card[for="c18"] {
-  background-image: url('img/image-18.jpg');
-}
-
-.card[for="c19"] {
-  background-image: url('img/image-19.jpg');
-}
-
-.card[for="c20"] {
-  background-image: url('img/image-20.jpg');
+.portfolio-item .item{
+	/*width:303px;*/
+	float:left;
+	margin-bottom:10px;
 }

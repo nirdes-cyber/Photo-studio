@@ -1,0 +1,225 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensuring the layout fits all screen sizes and viewport is properly set */
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.gallery-section {
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adapts from mobile to desktop */
+    gap: 15px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* Hover effect */
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Bold and italic captions */
+.caption {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #555;
+    text-align: center;
+}
+
+/* Lightbox Modal */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.9);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#caption {
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.close {
+    position: absolute;
+    top: 30px; /* Move it further down from the top */
+    right: 40px; /* Move it 40px inside from the right */
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's on top of other elements */
+}
+
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+}
+
+.prev {
+    left: 20px;
+}
+
+/* Adjust the next arrow to bring it more inside */
+.next {
+    right: 40px; /* Move it 40px from the right instead of 20px */
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+}
+
+
+/* Loading effect */
+.gallery-item img {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.gallery-item img.loaded {
+    opacity: 1;
+}
+
+/* Responsive Design for Foldable Phones and All Devices */
+@media (max-width: 1024px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .prev, .next {
+        padding: 10px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .prev, .next {
+        padding: 8px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .prev, .next {
+        padding: 6px;
+        font-size: 18px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .caption {
+        font-size: 0.8rem;
+    }
+}
+
+/* For foldable devices with two screens (portrait mode) */
+@media screen and (min-width: 768px) and (max-width: 1536px) and (orientation: portrait) and (fold-angle: 0deg) {
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* For foldable devices with two screens (landscape mode) */
+@media screen and (min-width: 768px) and (max-width: 1536px) and (orientation: landscape) and (fold-angle: 0deg) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Ultra-wide screens (such as laptops with large screens) */
+@media screen and (min-width: 1920px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .prev, .next {
+        padding: 20px;
+        font-size: 36px;
+    }
+}
