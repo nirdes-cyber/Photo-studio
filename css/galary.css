@@ -1,13 +1,14 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-
 }
-body{
+
+body {
   background-color: #eeeeee;
 }
+
 h1 {
   text-align: center;
   margin-top: 3rem;
@@ -15,22 +16,26 @@ h1 {
   letter-spacing: 20px;
   word-spacing: 20px;
 }
-.wrapper{
+
+.wrapper {
   width: 100%;
   height: 100vh;
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   margin-top: 4rem;
+  overflow: hidden;
+  position: relative;
 }
-.container{
+
+.container {
   height: 400px;
   display: flex;
-  flex-direction: nowrap;
-  justify-content: start;
+  flex-wrap: nowrap;
+  transition: transform 0.6s ease; /* Smooth transition for centering */
 }
-.card{
-  width: 80px;
+
+.card {
+  width: 150px;
   border-radius: .75rem;
   background-size: cover;
   cursor: pointer;
@@ -39,64 +44,120 @@ h1 {
   margin: 0 10px;
   display: flex;
   align-items: flex-end;
-  transition: .6s cubic-bezier(.28, -0.03,0,0.99);
+  transition: .6s cubic-bezier(.28, -0.03, 0, 0.99);
   box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
 }
-.card > .row{
-  color: white;
-  display: flex;
-  flex-direction: nowrap;
-}
-.card > .row > .icon{
-  background: #223;
-  color: white;
-  border-radius: 50%;
-  width: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 15px;
-}
-.card > .row > .description{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  overflow: hidden;
-  height: 80px;
-  width: 520px;
-  opacity: 0;
-  transform: translateY(30px);
-  transition-delay: .3s;
-  transition: all .3s ease;
-}
-.description p{
-  color: #ffffff;
-  padding-top: 5px;
 
-}
-.description h4{
-  text-transform: uppercase;
-}
-input{
+input {
   display: none;
 }
-input:checked + label{
+
+input:checked + label {
   width: 600px;
 }
-input:checked + label .description{
+
+input:checked + label .description {
   opacity: 1 !important;
   transform: translateY(0) !important;
+}
 
+/* Left and Right Arrow Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  font-size: 18px;
 }
-.card[for="c1"]{
-  background-image: url('img/image-4.jpg');
+
+.prev {
+  left: 10px;
 }
-.card[for="c2"]{
-  background-image: url('img/image-2.jpg');
+
+.next {
+  right: 10px;
 }
-.card[for="c3"]{
-  background-image: url('img/image-3.avif');
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
-.card[for="c4"]{
-  background-image: url('img/image-1.avif');
+
+/* Adding background images for each card */
+.card[for="c1"] { background-image: url('img/image-1.avif'); }
+.card[for="c2"] { background-image: url('img/image-2.jpg'); }
+.card[for="c3"] { background-image: url('img/image-3.avif'); }
+.card[for="c4"] { background-image: url('img/image-4.jpg'); }
+/* Continue adding image backgrounds for c5 to c20 */
+
+
+/* Remaining image backgrounds from c5 to c20 */
+
+
+.card[for="c5"] {
+  background-image: url('img/image-5.jpg');
+}
+
+.card[for="c6"] {
+  background-image: url('img/image-6.jpg');
+}
+
+.card[for="c7"] {
+  background-image: url('img/image-7.jpg');
+}
+
+.card[for="c8"] {
+  background-image: url('img/image-8.jpg');
+}
+
+.card[for="c9"] {
+  background-image: url('img/image-9.jpg');
+}
+
+.card[for="c10"] {
+  background-image: url('img/image-10.jpg');
+}
+
+.card[for="c11"] {
+  background-image: url('img/image-11.jpg');
+}
+
+.card[for="c12"] {
+  background-image: url('img/image-12.jpg');
+}
+
+.card[for="c13"] {
+  background-image: url('img/image-13.jpg');
+}
+
+.card[for="c14"] {
+  background-image: url('img/image-14.jpg');
+}
+
+.card[for="c15"] {
+  background-image: url('img/image-15.jpg');
+}
+
+.card[for="c16"] {
+  background-image: url('img/image-16.jpg');
+}
+
+.card[for="c17"] {
+  background-image: url('img/image-17.jpg');
+}
+
+.card[for="c18"] {
+  background-image: url('img/image-18.jpg');
+}
+
+.card[for="c19"] {
+  background-image: url('img/image-19.jpg');
+}
+
+.card[for="c20"] {
+  background-image: url('img/image-20.jpg');
 }

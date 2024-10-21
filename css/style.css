@@ -82,7 +82,7 @@ body {
 .header {
   min-height: 600px;
   background-image: radial-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.9)),
-    url("/assets/first.jpg");
+    url("/assets/home.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
